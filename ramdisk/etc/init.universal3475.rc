@@ -163,8 +163,8 @@ on boot
 
     chown system log /proc/sec_log
 
-    chown bluetooth bluetooth /dev/ttySAC3
-    chmod 0660 /dev/ttySAC3
+    chown bluetooth bluetooth /dev/ttySAC1
+    chmod 0660 /dev/ttySAC1
 
 # permissions for bluetooth.
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
