@@ -1,0 +1,4 @@
+allow toolbox mediaserver_exec:file read;
+allow toolbox bluetooth_a2dp_offload_prop:file getattr;
+allow toolbox mediaserver_exec:file getattr;
+allow toolbox ueventd:dir { getattr search };

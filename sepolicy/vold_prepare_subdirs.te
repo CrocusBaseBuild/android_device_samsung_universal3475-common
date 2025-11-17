@@ -1,0 +1,1 @@
+allow vold_prepare_subdirs mediaserver_exec:file read;

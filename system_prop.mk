@@ -25,7 +25,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # HWC
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.latch_unsignaled=1
+    debug.sf.latch_unsignaled=1 \
+    debug.renderengine.backend=gles
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -48,3 +49,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Define default initial receive window size in segments.
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tcp.default_init_rwnd=60
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.kernel.ebpf.supported=false

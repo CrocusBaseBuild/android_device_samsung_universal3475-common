@@ -1,0 +1,2 @@
+allow untrusted_app proc_tty_drivers:file read;
+allow untrusted_app virtual_ab_prop:file read;

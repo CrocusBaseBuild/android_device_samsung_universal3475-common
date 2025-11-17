@@ -59,3 +59,4 @@ unix_socket_connect(system_server, property, gpsd)
 get_prop(system_server, exported_camera_prop);
 get_prop(system_server, userspace_reboot_exported_prop);
 get_prop(system_server, userspace_reboot_config_prop);
+allow system_server debugfs:file { getattr open read };

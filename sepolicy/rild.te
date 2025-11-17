@@ -1,3 +1,5 @@
+permissive rild;
+
 # Allow rild to change perms
 allow rild self:capability chown;
 
@@ -35,10 +37,10 @@ allow rild proc_qtaguid_stat:file r_file_perms;
 r_dir_file(rild, mediaserver);
 
 # /data/misc/radio/*
-allow rild radio_data_file:dir rw_dir_perms;
-allow rild radio_data_file:file create_file_perms;
+allow rild radio_core_data_file:dir rw_dir_perms;
+allow rild radio_core_data_file:file create_file_perms;
 # /data/data/com.android.providers.telephony/databases/telephony.db
-allow rild radio_data_file:lnk_file r_file_perms;
+allow rild radio_core_data_file:lnk_file r_file_perms;
 
 # sdcard/SDET_PLMN/input/MNCMCC.txt
 allow rild storage_file:dir r_dir_perms;
@@ -61,3 +63,15 @@ allow rild media_rw_data_file:dir r_dir_perms;
 # /efs
 allow rild sec_efs_file:dir search;
 allow rild sec_efs_file:file r_file_perms;
+
+allow rild default_prop:file { open read };
+allow rild mediaserver_exec:file { getattr read };
+allow rild system_prop:file { getattr open read };
+allow rild default_prop:file getattr;
+allow rild efs_file:file ioctl;
+allow rild radio_data_file:dir search;
+allow rild radio_data_file:file { getattr ioctl lock open read write };
+
+allow rild hal_audio_default:dir search;
+allow rild hal_audio_default:file { getattr open read };
+

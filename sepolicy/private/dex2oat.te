@@ -1,0 +1,1 @@
+allow dex2oat mediaserver_exec:file { getattr read };

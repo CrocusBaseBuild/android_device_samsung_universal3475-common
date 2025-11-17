@@ -8,3 +8,5 @@ allow hal_drm_default cpk_efs_file:file r_file_perms;
 
 allow hal_drm_default media_data_file:file create_file_perms;
 allow hal_drm_default media_data_file:dir create_dir_perms;
+
+allow hal_drm_default mediaserver_exec:file read;

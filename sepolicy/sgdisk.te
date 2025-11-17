@@ -1,0 +1,1 @@
+allow sgdisk mediaserver_exec:file read;

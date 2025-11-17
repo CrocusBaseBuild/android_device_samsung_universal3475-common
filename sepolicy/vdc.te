@@ -1,0 +1,1 @@
+allow vdc mediaserver_exec:file { getattr read };

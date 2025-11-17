@@ -1,0 +1,1 @@
+allow mediametrics mediaserver_exec:file read;

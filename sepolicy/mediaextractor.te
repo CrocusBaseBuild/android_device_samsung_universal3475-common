@@ -1,0 +1,1 @@
+allow mediaextractor mediaserver_exec:file read;

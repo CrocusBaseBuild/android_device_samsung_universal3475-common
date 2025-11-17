@@ -16,8 +16,12 @@
 
 LOCAL_PATH := device/samsung/universal3475-common
 BUILD_TOP := $(shell pwd)
-
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+# VNDK VERSION
+BOARD_VNDK_VERSION := current
+# Dedupe VNDK libraries with identical core variants.
+TARGET_VNDK_USE_CORE_VARIANT := true
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
@@ -188,6 +192,7 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/etc/fstab.universal3475
 # SELinux
 BOARD_SEPOLICY_DIRS += device/samsung/universal3475-common/sepolicy 
 BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
